@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xunhuan</title>
+    <script src="angular.min.js"></script>
+    <script>
+        // 1想要做控制器就需要  自定义一个模块
+        var app = angular.module('myApp',[]);
+        //在模块的基础上建立控制器代码    定义控制器
+        //第一个参数是控制器   第二个是执行的函数
+        app.controller('myController',function ($scope) {
+           $scope.ArrayList=[
+               "zhangsan","lisi","wangwu","zhaoliu"
+           ];
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+<h1 ng-repeat="x in ArrayList">{{x}}}</h1>
+</body>
+</html>
